@@ -1,0 +1,157 @@
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, li, p, a, img, div, section {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+ul, ol {
+    padding-left: 1.2rem;
+    margin-left: 0;
+}
+
+
+body {
+    background-color: rgb(85, 107, 47);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: black;
+    background-image: url('imagens/degra.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff8f0cc;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+header, section, footer {
+    padding: 1rem;
+    background-color: #fdfcfb;
+    border-radius: 8px;
+}
+
+#título {
+    text-align: center;
+    text-decoration: overline;
+    color: burlywood;
+    font-size: 1.5rem;
+}
+
+.classe {
+    background-color: burlywood;
+    padding: 0.4rem;
+    display: inline-block;
+    font-size: 1.1rem;
+}
+
+#especial {
+    color: black;
+    font-weight: bold;
+}
+
+a {
+    border: 1px solid rgb(85, 107, 47);
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.25rem;
+    word-break: break-all;
+}
+
+a:visited {
+    color: rgb(0, 132, 255);
+}
+a:hover {
+    background-color: black;
+}
+a:active {
+    background-color: black;
+    color: white;
+}
+
+.Tópico {
+    text-transform: uppercase;
+    text-indent: 5%;
+    border: 1px dotted black;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-size: 1rem;
+}
+
+li {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+h6 {
+    background-color: bisque;
+    font-weight: 600;
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.gif, .img-final {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0.5rem auto;
+}
+
+@media (min-width: 800px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "info objetivo"
+            "formacao experiencia"
+            "qualidades qualidades"
+            "footer footer";
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .header { grid-area: header; text-align: center; }
+    .info-pessoal { grid-area: info; }
+    .objetivo { grid-area: objetivo; }
+    .formacao { grid-area: formacao; }
+    .experiencia { grid-area: experiencia; }
+    .qualidades { grid-area: qualidades; }
+    footer { grid-area: footer; text-align: center; }
+
+    #título {
+        font-size: 2rem;
+    }
+
+    .Tópico {
+        font-size: 1.1rem;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    h6 {
+        font-size: 1rem;
+    }
+
+    .gif {
+        max-width: 200px;
+    }
+
+    .img-final {
+        max-width: 150px;
+    }
+}
